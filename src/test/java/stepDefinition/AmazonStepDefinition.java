@@ -1,7 +1,6 @@
 package stepDefinition;
 
 
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -20,7 +19,7 @@ public class AmazonStepDefinition {
 
     @Then("search mandosi")
     public void search_mandosi() {
-        amazonPage.searchBox.sendKeys("mandosi"+Keys.ENTER);
+        amazonPage.searchBox.sendKeys("mandosi" + Keys.ENTER);
     }
 
     @Then("test results contains mandosi")
@@ -29,7 +28,16 @@ public class AmazonStepDefinition {
     }
 
     @Then("close page")
-    public void close_page() {
-        Driver.closeDriver();
+    public void close_page() {Driver.closeDriver();
     }
+
+    @Then("search glass")
+    public void search_glass() {amazonPage.searchBox.sendKeys("glass" + Keys.ENTER);
+    }
+
+    @Then("test results contains glass")
+    public void test_results_contains_glass() {
+        Assert.assertTrue(amazonPage.resultText.getText().contains("glass"));
+    }
+
 }
