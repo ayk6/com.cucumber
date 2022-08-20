@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
        // ,dryRun = false  eksik adımları oluşturmak için true kullanılır
             // dryRun testi çalıştırmaz- eksik adımları bildirir
         // or ya da and ile birden fazla da çalıştırılabilir
-        ,tags = "@config"
+        ,tags = "@hmc2"
 )
 public class TestRunner {
 }
