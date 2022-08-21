@@ -44,4 +44,14 @@ public class HmcStepDefinition {
     public void checkFailedLoggingIn() {
         Assert.assertTrue(hmcPage.loginButton2.isDisplayed());
     }
+
+    @And("send wrong username {string}")
+    public void sendWrongUsername(String username) {
+        hmcPage.usernameTextBox.sendKeys(username);
+    }
+
+    @And("send wrong password {string}")
+    public void sendWrongPassword(String password) {
+        hmcPage.passwordTextBox.sendKeys(password);
+    }
 }
